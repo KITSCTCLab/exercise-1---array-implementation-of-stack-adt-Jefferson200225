@@ -6,19 +6,42 @@ class Stack:
 
     def is_empty(self):
         # Write code here
+        if self.top == -1 :
+            return 1
+        else :
+            return 0
+
 
     def is_full(self):
         # Write code here
+         if self.top == (self.size - 1) :
+                return 1
+         else :
+                return 0
+        
 
     def push(self, data):
         if not self.is_full():
-            # Write code here
+           self.top = self.top+1
+          self.l[self.top]=y
+         else:
+            print("The stack is full")
+          return "Push is not allowed"
+        
 
     def pop(self):
         if not self.is_empty():
-            # Write code here
+             print(self.l[self.top])
+          self.top = self.top-1
+          return 0
+        else:
+             return "the stack is empty"
+        
+
 
     def status(self):
+        for x in range(self.top+1):
+          print(self.l[x])
         # Write code here
 
 # Do not change the following code
